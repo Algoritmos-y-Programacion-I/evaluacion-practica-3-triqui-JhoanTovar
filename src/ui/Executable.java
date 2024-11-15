@@ -69,10 +69,17 @@ public class Executable {
     }
 
     private void jugadaHumano() {
-        // Implementación de jugada de humano
+        System.out.println("Por favor ingrese la posicion de la fila (1, 2 o 3):");
+        int filaHumano = reader.nextInt();
+        reader.nextLine();
+        System.out.println("Por favor ingrese la posicion de la columna (1, 2 o 3):");
+        int columnaHumano = reader.nextInt();
+        reader.nextLine();
+        System.out.println(cont.jugadaHumano(filaHumano, columnaHumano));
+        imprimirTablero();
     }
 
     private void validarGanador() {
-        // Implementación de la validación si alguien ya ganó el triqui
+        System.out.println(cont.imprimirResultado(cont.verificarGanador()));
     }
 }
